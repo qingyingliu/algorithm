@@ -3,7 +3,7 @@
 using namespace std;
 int main(){
 	freopen("C://Code//Data structure//binary-search-tree//input.in", "r", stdin);
-	freopen("C://Code//Data structure//binary-search-tree//output.out", "w", stdout);
+	//freopen("C://Code//Data structure//binary-search-tree//output.out", "w", stdout);
 	int t;
 	cin >> t;
 	while (t--)
