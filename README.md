@@ -5,4 +5,4 @@
 
 实现的功能主要有如下：
 
-binary-search-tree文件夹实现的是二叉排序（搜索）树的头文件，只要include这个头文件，你就可以轻松地实现insert,delete,find,find-min等功能。
+binary-search-tree文件夹实现的是二叉排序（搜索）树的头文件，只要include “bst.h” 这个头文件，你就可以轻松地实现insert,delete,find,find-min等功能。
