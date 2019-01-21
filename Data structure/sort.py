@@ -176,19 +176,19 @@ def mergeSort(data,start=0,end=None,ascending=True,inplace=False):
     mid = (start + end) // 2
     mergeSort(data,start=start,end=mid,inplace=True)
     mergeSort(data,start=mid,end=end,inplace=True)
-    i = start
-    j = mid
-    copy_data = data[::]
+    i = 0
+    j = mid-start
+    copy_data = data[start:end]
     for cur_loc in range(start,end):
-        if i < mid:
-            if j < end and data[i] > data[j]:
+        if i < mid-start:
+            if j < end-start and copy_data[i] > copy_data[j]:
                 data[cur_loc] = copy_data[j]
                 j = j + 1
             else:
                 data[cur_loc] = copy_data[i]
                 i = i + 1
         else:
-            if j < end:
+            if j < end-start:
                 data[cur_loc] = copy_data[j]
                 j = j + 1
             else:
@@ -197,6 +197,9 @@ def mergeSort(data,start=0,end=None,ascending=True,inplace=False):
     if not ascending:
         data[start:end].reverse()
     return data
+
+data = [5,4,3,2,1]
+print(mergeSort(data))
 
 def insertSort(data,start=0,end=None,ascending=True,inplace=False,gap=1):
     if not inplace:
